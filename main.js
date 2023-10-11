@@ -98,10 +98,6 @@ const babyName = [
   },
 ];
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
-
 let textInput = "select gender";
 
 function selectValue() {
@@ -133,6 +129,10 @@ function genderType(gen) {
   const getSecondName = getValues[Math.floor(Math.random() * getValues.length)];
   textValue.value = `${getFirstName} ${getSecondName}`;
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
 function resetBtn() {
   form.reset();
